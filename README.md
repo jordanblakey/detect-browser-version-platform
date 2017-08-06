@@ -1,6 +1,21 @@
 # detect-browser-version-platform
 Detects client browser, version, and platform(OS). Also includes an object to detect mobile devices.
 
+## Methods and Usage
+```
+isMobile.Android();
+isMobile.BlackBerry();
+isMobile.iOS();
+isMobile.Opera();
+isMobile.Windows();
+isMobile.any();
+browserReport();
+if(!isMobile.any()){
+  $.stellar();
+}
+
+```
+
 ```
 $(function() {
 
