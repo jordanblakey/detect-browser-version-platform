@@ -25,7 +25,7 @@ $(function() {
   // DETECT MOBILE USER AGENTS
   /////////////////////////////////////////////////////////////////////////////////////
 
-  // browser detect
+   // browser detect
 var BrowserDetect = {
         init: function() {
 		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
@@ -122,7 +122,7 @@ var BrowserDetect = {
 };
 BrowserDetect.init();
 
-///// mobile
+///// mobile test methods
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -144,15 +144,15 @@ var isMobile = {
     }
 };
 
-var browserVersionPlatform = BrowserDetect.browser + ' ' + BrowserDetect.version + ', running on ' + BrowserDetect.OS + '.';
-console.log(browserVersionPlatform);
-
-if(isMobile.any()){
-  console.log('You are on a mobile device.');
+///// Log Browser Info to the Console
+var browserReport = function() {
+  console.log(BrowserDetect.browser + ' ' + BrowserDetect.version + ', running on ' + BrowserDetect.OS + '.');
+  if(isMobile.any()){
+    console.log('You\'re on a mobile device.');
+  }
+  else {
+    console.log('You\'re not on a mobile device.');
+  }
 }
-
-// Conditional Logic for a specific Browser
-// if (BrowserDetect.browser === 'Chrome' && BrowserDetect.version < 6) {
-//}
 
 ```
