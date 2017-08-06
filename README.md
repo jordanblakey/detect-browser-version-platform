@@ -3,15 +3,17 @@ Detects client browser, version, and platform(OS). Also includes an object to de
 
 ## Methods and Usage
 ```
-isMobile.Android();
-isMobile.BlackBerry();
-isMobile.iOS();
-isMobile.Opera();
-isMobile.Windows();
-isMobile.any();
-browserReport();
+isMobile.Android(); // Boolean test
+isMobile.BlackBerry(); // Boolean test
+isMobile.iOS(); // Boolean test
+isMobile.Opera(); // Boolean test
+isMobile.Windows(); // Boolean test
+isMobile.any(); // Boolean test
+
+browserReport(); // Log browser, version, platform, and mobile/desktop status to the console.
+
 if(!isMobile.any()){
-  $.stellar();
+  // Code to execute if not on mobile
 }
 
 ```
