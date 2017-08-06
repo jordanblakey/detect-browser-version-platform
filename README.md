@@ -2,7 +2,13 @@
 Detects client browser, version, and platform(OS). Also includes an object to detect mobile devices.
 
 ```
-// browser detect
+$(function() {
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  // DETECT MOBILE USER AGENTS
+  /////////////////////////////////////////////////////////////////////////////////////
+
+  // browser detect
 var BrowserDetect = {
         init: function() {
 		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
@@ -120,11 +126,16 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-Raw
- sample_detect.js
-if (BrowserDetect.browser === 'Safari' && BrowserDetect.version < 6) {
 
-	//Javascript goes here
+var browserVersionPlatform = BrowserDetect.browser + ' ' + BrowserDetect.version + ', running on ' + BrowserDetect.OS + '.';
+console.log(browserVersionPlatform);
 
+if(isMobile.any()){
+  console.log('You are on a mobile device.');
 }
+
+// Conditional Logic for a specific Browser
+// if (BrowserDetect.browser === 'Chrome' && BrowserDetect.version < 6) {
+//}
+
 ```
