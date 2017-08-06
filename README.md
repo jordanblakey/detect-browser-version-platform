@@ -16,6 +16,10 @@ if(!isMobile.any()){
   // Code to execute if not on mobile
 }
 
+// Conditional Logic for a specific Browser or version
+if (BrowserDetect.browser === 'Chrome' && BrowserDetect.version < 6) {
+  // Code to execute
+}
 ```
 
 ```
